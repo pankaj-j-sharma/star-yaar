@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="maincolor">#E25E14</color>
+
+    <color name="white">#fff</color>
+    <color name="colorwhite_50">#CCffffff</color>
+    <color name="black">#2F2F2F</color>
+    <color name="graycolor">#D3D3D3</color>
+    <color name="gainsboro">#DCDCDC</color>
+    <color name="lightgraycolor">#f2f2f2</color>
+    <color name="darkgray">#93959A</color>
+    <color name="dimgray">#696969</color>
+    <color name="last_updated">#57595E</color>
+
+    <color name="delete_message_bg">#f2f2f2</color>
+    <color name="delete_message_text">#b8b8b8</color>
+
+    <color name="transparent">#00ffffff</color>
+    <color name="fifty_transparent_black">#802F2F2F</color>
+
+    <color name="redcolor">#ff0008</color>
+
+    <color name="app_color">#640000</color>
+    <color name="app_color_light">#AE3E3E</color>
+    <color name="app_color_lighter">#D37D7D</color>
+    <color name="app_color_lightest">#7AD37D7D</color>
+    <color name="app_color_dark">#270100</color>
+
+    <color name="white_translucent">#AAFFFFFF</color>
+
+    <color name="lighter_gray">#eeeeee</color>
+    <color name="txt_color">#3b3b3b</color>
+    <color name="shadow_color">#7F000000</color>
+</resources>

@@ -1,0 +1,187 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+//apply plugin: 'io.fabric'
+
+// Apply the Crashlytics Gradle plugin
+apply plugin: 'com.google.firebase.crashlytics'
+
+buildscript {
+    repositories {
+        // maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        //classpath 'io.fabric.tools:gradle:1.28.0'
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+    mavenCentral()
+}
+
+android {
+
+    compileSdkVersion 29
+
+    defaultConfig {
+        applicationId "com.incampusit.staryaar"
+        minSdkVersion 24
+        targetSdkVersion 29
+        versionCode 32
+        versionName "4.9"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        proguardFiles getDefaultProguardFile('proguard-android.txt')
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+
+            lintOptions {
+                checkReleaseBuilds false
+                abortOnError false
+            }
+
+            minifyEnabled true //Important step
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            android.applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "staryaar.apk"
+                }
+            }
+            testCoverageEnabled false
+        }
+    }
+
+    buildFeatures {
+        dataBinding = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleCompatible
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.exifinterface:exifinterface:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    implementation 'androidx.multidex:multidex:2.0.0'
+    implementation 'com.googlecode.mp4parser:isoparser:1.1.21'
+    implementation 'androidx.percentlayout:percentlayout:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.exoplayer:exoplayer:2.8.3'
+    //implementation 'com.facebook.android:facebook-android-sdk:4.26.0'
+    implementation 'com.facebook.android:facebook-login:[5,6)'
+    implementation 'com.gmail.samehadar:iosdialog:1.0'
+    implementation 'com.github.ybq:Android-SpinKit:1.2.0'
+    implementation 'net.the4thdimension:audio-wife:1.0.3'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.mindorks.android:prdownloader:0.6.0'
+    implementation 'com.akexorcist:RoundCornerProgressBar:2.0.3'
+    implementation 'com.mcxiaoke.volley:library-aar:1.0.1'
+    //implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.airbnb.android:lottie:2.7.0'
+
+    //Do not Update this library their is a camera issue with new version
+    implementation 'com.wonderkiln:camerakit:0.13.0'
+
+
+    //You will change the versions at your own risk.
+    //Do not Change below 7 libraries versions
+    //if you want to update these libraries first you have to convert the project to androidX
+    implementation 'com.google.android.gms:play-services-auth:18.1.0'
+    implementation 'com.google.firebase:firebase-database:19.3.1'
+    //implementation 'com.google.firebase:firebase-messaging:17.3.0'
+    implementation 'com.google.firebase:firebase-messaging:20.2.4'
+    implementation 'com.google.firebase:firebase-core:17.4.4'
+    implementation 'com.google.firebase:firebase-storage:19.1.1'
+    implementation 'com.google.firebase:firebase-auth:19.3.2'
+    implementation 'com.google.android.gms:play-services-ads:16.0.0'
+
+
+    implementation 'com.github.MasayukiSuda:GPUVideo-android:v0.1.1'
+    implementation 'jp.co.cyberagent.android:gpuimage:2.0.3'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    implementation('com.giphy.sdk:core:1.0.2@aar') {
+        transitive = true
+    }
+//    implementation('com.crashlytics.sdk.android:crashlytics:2.10.1@aar') {
+//        transitive = true;
+//    }
+    implementation 'com.chauthai.overscroll:overscroll-bouncy:0.1.1'
+    implementation 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:2.3.0'
+    implementation 'com.github.danylovolokh:hashtag-helper:1.1.0'
+    implementation 'com.mindorks.android:prdownloader:0.6.0'
+
+    // implementation 'com.writingminds:FFmpegAndroid:0.3.2'
+    //implementation 'com.github.adrielcafe:AndroidAudioConverter:0.0.8'
+    androidTestImplementation 'androidx.test:runner:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    // Add the Firebase Crashlytics SDK.
+    implementation 'com.google.firebase:firebase-crashlytics:17.1.1'
+    // Recommended: Add the Firebase SDK for Google Analytics.
+    implementation 'com.google.firebase:firebase-analytics:17.4.4'
+
+    implementation 'com.google.android.gms:play-services-safetynet:10.2.1'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.10'
+    // retrofit for fater video uploads
+    implementation 'com.squareup.retrofit2:retrofit:2.0.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.0.0'
+
+    //implementation 'com.github.a914-gowtham:Android-video-trimmer:1.0.9'
+    //implementation 'com.github.yangjie10930:EpMedia:v1.0.1'
+    implementation 'com.crystal:crystalrangeseekbar:1.1.3'
+
+    // -------------------AR Gear Libs ----------------------------
+    // To add ARGear library
+    implementation(name: 'argear', ext: 'aar')
+
+    // To add TensorFlow Lite library
+    implementation 'org.tensorflow:tensorflow-lite:1.14.0'
+    implementation 'org.tensorflow:tensorflow-lite-gpu:1.14.0'
+
+    // To add Retrofit library
+    implementation "com.squareup.retrofit2:retrofit:2.4.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.4.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:3.10.0"
+
+    // To add gson library
+    implementation "com.google.code.gson:gson:2.8.5"
+    // -------------------AR Gear Libs ----------------------------
+
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.0.0'
+
+    implementation 'com.github.andremion:counterfab:1.2.2'
+    implementation 'com.google.android.material:material:1.1.0-alpha06'
+
+    implementation 'com.danikula:videocache:2.7.1'
+    implementation 'com.google.firebase:firebase-dynamic-links:19.0.0'
+
+    implementation 'com.google.android.play:core:1.8.0'
+    implementation 'com.arthenica:mobile-ffmpeg-full:4.4'
+    implementation 'com.arthenica:smart-exception-java:0.1.0'
+
+    // Android video trimmer related libraries
+    implementation 'com.github.iknow4:android-utils-sdk:1.1.2'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.2'
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
+    implementation 'androidx.core:core-ktx:1.3.1'
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+apply plugin: 'com.google.gms.google-services'

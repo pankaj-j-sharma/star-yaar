@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/WatchVideo_F"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_color"
+    android:clickable="true"
+    tools:context="com.incampusit.staryaar.Home.Home_F">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_color">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recylerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/app_color" />
+
+
+        <ImageButton
+            android:id="@+id/Goback"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_back"
+            android:tint="@color/white" />
+
+        <ProgressBar
+            android:id="@+id/p_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="43dp"
+            android:indeterminateOnly="true"
+            android:indeterminateTint="@color/white"
+            android:secondaryProgress="@android:integer/config_shortAnimTime"
+            android:visibility="visible" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <RelativeLayout
+                android:id="@+id/write_layout"
+                android:layout_width="match_parent"
+                android:layout_height="43dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_alignParentBottom="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/black_gradient" />
+
+
+                <EditText
+                    android:id="@+id/message_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toLeftOf="@+id/send_btn_layout"
+                    android:backgroundTint="@color/transparent"
+                    android:hint="Leave a comment..."
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/colorwhite_50"
+                    android:textSize="14dp" />
+
+                <RelativeLayout
+                    android:id="@+id/send_btn_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp">
+
+
+                    <ImageButton
+                        android:id="@+id/send_btn"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@color/transparent"
+                        android:padding="5dp"
+                        android:rotation="-45"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_send"
+                        android:tint="@color/white" />
+
+                    <ProgressBar
+                        android:id="@+id/send_progress"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:padding="5dp"
+                        android:theme="@style/white_progressbar"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

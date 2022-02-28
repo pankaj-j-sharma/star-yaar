@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_bulge"
+    android:elevation="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:baselineAligned="false"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            android:weightSum="2">-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_weight="1.9"-->
+        <!--                android:orientation="horizontal">-->
+
+        <!--                <Button-->
+        <!--                    android:id="@+id/clear_sticker_button"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_above="@id/sticker_recyclerview"-->
+        <!--                    android:layout_toEndOf="@id/close_sticker_button"-->
+        <!--                    android:background="@drawable/filter_background"-->
+        <!--                    android:text="clear"-->
+        <!--                    android:textColor="@color/app_color_dark" />-->
+
+        <!--            </LinearLayout>-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_weight=".1"-->
+        <!--                android:orientation="horizontal">-->
+
+        <!--                <Button-->
+        <!--                    android:id="@+id/close_sticker_button"-->
+        <!--                    android:layout_width="52dp"-->
+        <!--                    android:layout_height="52dp"-->
+        <!--                    android:layout_above="@id/sticker_recyclerview"-->
+        <!--                    android:layout_alignParentEnd="true"-->
+        <!--                    android:background="@drawable/close_button_default" />-->
+        <!--            </LinearLayout>-->
+        <!--        </LinearLayout>-->
+
+        <LinearLayout
+            android:id="@+id/bulgefun_close_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1.9"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <!--            <Button-->
+                <!--                android:id="@+id/close_bulge_button"-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_gravity="left"-->
+                <!--                android:background="@drawable/filter_background"-->
+                <!--                android:text="close"-->
+                <!--                android:textColor="@color/app_color_dark" />-->
+
+                <Button
+                    android:id="@+id/close_sticker_button"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:layout_above="@id/sticker_recyclerview"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/ic_back" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0.1"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp">
+
+                <Button
+                    android:id="@+id/clear_sticker_button"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/ic_reset"
+                    android:backgroundTint="@color/white" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/sticker_recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/sticker_category_recyclerview"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/sticker_category_recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

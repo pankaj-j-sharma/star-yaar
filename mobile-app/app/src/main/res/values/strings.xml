@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Star Yaar</string>
+
+
+    <!--    <string name="facebook_app_id">fb_id</string>-->
+    <!--    <string name="fb_login_protocol_scheme">fb(fb_id)</string>-->
+
+    <string name="safety_net_api_key">AIzaSyDtiOmvkM0LXn80935D8X2zed8Z7CZoZ9Y</string>
+
+    <string name="facebook_app_id">677920666132581</string>
+    <string name="fb_login_protocol_scheme">fb677920666132581</string>
+
+    <string name="ad_app_id">ca-app-pub-1072037981830297~8957153928</string>
+    <string name="my_Interstitial_Add">ca-app-pub-1072037981830297/6966056039</string>
+    <string name="banner_ad">ca-app-pub-1072037981830297/9157406421</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="txt_empty" />
+    <string name="txt_done">Done</string>
+    <string name="txt_trimming_video">Trimming Video…</string>
+    <string name="txt_cancel">Cancel</string>
+    <string name="txt_smaller">Video should be smaller than</string>
+    <string name="default_time">00:00</string>
+    <string name="custom">Custom</string>
+    <string name="square">Square</string>
+    <string name="portrait">Portrait</string>
+    <string name="landscape">Landscape</string>
+    <string name="_4_3">4:3</string>
+    <string name="_16_9">16:9</string>
+    <string name="share_deeplink">
+        Great video ! Tap below to view it\nhttps://staryaar.page.link/Zi7X
+    </string>
+    <string name="share_video">
+        \nDownload StarYaar- Short Video App\nEnjoy the most trending short videos\n\nClick this link to explore more videos!\n👇👇👇</string>
+    <string name="play_store">https://play.google.com/store/apps/details?id=com.incampusit.staryaar</string>
+
+    <string name="trimmed_done">video trim completed！</string>
+    <string name="trimming">trimming video...</string>
+    <string name="video_shoot_tip">Drag to select the segment within %d second that you want to post！</string>
+    <string name="open_permission">Open permission</string>
+    <string name="video_record_des">To record a video, you need to give the camera and microphone access.</string>
+    <string name="recording">RECORD</string>
+    <string name="back">Back</string>
+    <string name="finish">Finish</string>
+
+</resources>

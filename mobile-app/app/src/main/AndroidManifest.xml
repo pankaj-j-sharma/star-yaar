@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.incampusit.staryaar">
+
+    <!--AR Gear================================================ Permissions-->
+
+    <!-- Required Access -->
+    <!--    <uses-permission android:name="android.permission.CAMERA" />-->
+    <!--    <uses-permission android:name="android.permission.INTERNET" />-->
+    <!--    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
+    <!--    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+    <uses-permission
+        android:name="android.permission.MEDIA_CONTENT_CONTROL"
+        tools:ignore="ProtectedPermissions" />
+
+    <!-- Selective Access -->
+    <!--    <uses-permission android:name="android.permission.RECORD_AUDIO" />-->
+
+    <uses-feature
+        android:glEsVersion="0x00030001"
+        android:required="true" />
+
+
+    <!--AR Gear================================================ Permissions-->
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.MANAGE_DOCUMENTS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-feature
+        android:name="android.hardware.camera2.full"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:name="com.incampusit.staryaar.SimpleClasses.StarYaar"
+        android:allowBackup="false"
+        android:extractNativeLibs="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:screenOrientation="portrait"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        tools:replace="allowBackup,supportsRtl">
+        <activity android:name="com.incampusit.staryaar.SoundLists.VideoSound_A"></activity>
+        <activity android:name=".ReportContent.ReportContent_A"></activity>
+
+        <activity
+            android:name="com.incampusit.staryaar.Video_Recording.GalleryVideos.GalleryVideos_A"
+            android:screenOrientation="portrait"
+            android:theme="@style/white_status"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name="com.incampusit.staryaar.Video_Recording.GallerySelectedVideo.GallerySelectedVideo_A"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name="com.incampusit.staryaar.Accounts.Login_A"
+            android:theme="@android:style/Theme.Translucent"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.incampusit.staryaar.Splash_A"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="staryaar"
+                    android:pathPrefix="/video"
+                    android:scheme="https" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.google.android.safetynet.ATTEST_API_KEY"
+                android:value="@string/safety_net_api_key" />
+        </activity>
+        <activity
+            android:name="com.incampusit.staryaar.Main_Menu.MainMenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/transparent_status"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.incampusit.staryaar.WatchVideos.WatchVideos_F"
+            android:parentActivityName="com.incampusit.staryaar.Main_Menu.MainMenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/transparent_status"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="incampus.co.in"
+                    android:pathPrefix="/API/"
+                    android:scheme="http" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.incampusit.staryaar.Main_Menu.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".videotrim.features.select.VideoSelectActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".videotrim.features.trim.VideoTrimmerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videotrim.features.record.VideoRecordActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".VideoTrimmer.ui.ActVideoTrimmer"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/VideoTrimmerTheme" />
+
+        <activity
+            android:name=".VideoCrop.VideoCropActivity"
+            android:clearTaskOnLaunch="true"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:theme="@style/VideoTrimmerTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity
+            android:name="com.incampusit.staryaar.Video_Recording.Video_Recoder_A"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.incampusit.staryaar.Video_Recording.Preview_Video_A"
+            android:screenOrientation="portrait"
+            android:theme="@style/black_status"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.incampusit.staryaar.Video_Recording.Post_Video_A"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name="com.incampusit.staryaar.SoundLists.SoundList_Main_A"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notif" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/maincolor" />
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service
+            android:name="com.incampusit.staryaar.Services.Upload_Service"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="startservice" />
+            </intent-filter>
+        </service>
+
+        <service android:name="com.incampusit.staryaar.Firebase_Notification.Notification_Receive">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+
+        <activity
+            android:name=".argear.ArGearCameraActivity"
+            android:configChanges="locale|layoutDirection"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".argear.ImageViewerActivity" />
+
+        <activity
+            android:name=".Video_Recording.StorageRead.StorageActivity"
+            android:configChanges="locale|layoutDirection"
+            android:screenOrientation="portrait"></activity>
+
+    </application>
+
+
+</manifest>

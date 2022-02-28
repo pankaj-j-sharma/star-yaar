@@ -1,0 +1,161 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingTop="24dp"
+    tools:context="com.incampusit.staryaar.Notifications.Notification_F">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/d_bottom_gray_line">
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="Notifications"
+                    android:textColor="@color/app_color_dark"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+
+                <!--                <ImageButton-->
+                <!--                    android:id="@+id/inbox_btn"-->
+                <!--                    android:layout_width="24dp"-->
+                <!--                    android:layout_height="24dp"-->
+                <!--                    android:layout_alignParentRight="true"-->
+                <!--                    android:layout_centerVertical="true"-->
+                <!--                    android:layout_marginRight="15dp"-->
+                <!--                    android:background="@color/transparent"-->
+                <!--                    android:scaleType="fitCenter"-->
+                <!--                    android:src="@drawable/ic_inbox" />-->
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bannerad"
+            android:layout_below="@+id/toolbar">
+
+            <com.incampusit.staryaar.Inbox.MovableFloatingActionButton
+                android:id="@+id/inbox_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="@color/app_color"
+                android:scaleType="center"
+                android:src="@drawable/ic_inbox"
+                android:tooltipText="111"
+                android:visibility="gone" />
+
+            <com.andremion.counterfab.CounterFab
+                android:id="@+id/counter_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:alpha="0.7"
+                android:backgroundTint="@color/app_color"
+                android:elevation="10dp"
+                android:fadingEdgeLength="30dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_notification" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recylerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/no_data_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/img_no_job"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_whoops" />
+
+                <TextView
+                    android:id="@+id/whoops"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_no_job"
+                    android:layout_centerHorizontal="true"
+                    android:text="Whoops!"
+                    android:textColor="@color/dimgray"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/whoops"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginRight="55dp"
+                    android:gravity="center"
+                    android:text="There are no notifications you have so far"
+                    android:textColor="@color/dimgray"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/bannerad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/write_layout"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ad"></com.google.android.gms.ads.AdView>
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

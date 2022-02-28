@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/close_filter_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/filter_recyclerview"
+        android:text="close" />
+
+    <Button
+        android:id="@+id/clear_filter_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/filter_recyclerview"
+        android:layout_toEndOf="@id/close_filter_button"
+        android:text="clear filter" />
+
+    <Button
+        android:id="@+id/filter_plus_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/close_filter_button"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/filter_minus_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/close_filter_button"
+        android:layout_toEndOf="@id/filter_plus_button"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/vignett_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/close_filter_button"
+        android:layout_toEndOf="@id/filter_minus_button"
+        android:text="Vignette" />
+
+    <Button
+        android:id="@+id/blur_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/close_filter_button"
+        android:layout_toEndOf="@id/vignett_button"
+        android:text="Blur" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/filter_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

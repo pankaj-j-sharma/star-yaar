@@ -1,0 +1,465 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:fitsSystemWindows="true"
+    android:paddingTop="24dp"
+    tools:context="com.incampusit.staryaar.Profile.Edit_Profile_F">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/d_bottom_gray_line">
+
+                <ImageButton
+                    android:id="@+id/Goback"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/ic_back"
+                    android:tint="@color/app_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:text="Profile"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/save_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:text="Save"
+                    android:textColor="@color/redcolor"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="20dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/profile_image_placeholder" />
+
+                    <ImageButton
+                        android:id="@+id/upload_pic_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_camera_icon" />
+
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/userhandle_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="@color/transparent"
+                    android:text="handle"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:minHeight="50dp">
+
+                        <ImageView
+                            android:id="@+id/profile_icon_1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_profile_gray" />
+
+                        <EditText
+                            android:id="@+id/firstname_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/profile_icon_1"
+                            android:backgroundTint="@color/transparent"
+                            android:hint="First name"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/graycolor"
+                            android:textSize="14dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="49dp"
+                            android:layout_toRightOf="@+id/profile_icon_1"
+                            android:background="@color/graycolor" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:minHeight="50dp">
+
+                        <ImageView
+                            android:id="@+id/profile_icon_2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_profile_gray" />
+
+                        <EditText
+                            android:id="@+id/lastname_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/profile_icon_2"
+                            android:backgroundTint="@color/transparent"
+                            android:hint="Last name"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/graycolor"
+                            android:textSize="14dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="49dp"
+                            android:layout_toRightOf="@+id/profile_icon_2"
+                            android:background="@color/graycolor" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/lightgraycolor"
+                        android:elevation="0.5dp"
+                        android:padding="10dp"
+                        android:text="Gender"
+                        android:textColor="@color/dimgray"
+                        android:textSize="16dp"
+                        android:textStyle="italic" />
+
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp">
+
+                        <RadioButton
+                            android:id="@+id/male_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Male"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:theme="@style/RadioButton" />
+
+                        <RadioButton
+                            android:id="@+id/female_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="female"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:theme="@style/RadioButton" />
+
+                        <RadioButton
+                            android:id="@+id/others_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Others"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:theme="@style/RadioButton" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/lightgraycolor"
+                        android:elevation="0.5dp"
+                        android:padding="10dp"
+                        android:text="Social Profile"
+                        android:textColor="@color/dimgray"
+                        android:textSize="16dp"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/user_facebook_link"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/transparent"
+                        android:hint="facebook profile id e.g. staryaarapp"
+                        android:imeOptions="flagNavigateNext"
+                        android:minLines="2"
+                        android:nextFocusForward="@+id/jobtitle_edit"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="5dp"
+                        android:textColor="@color/dimgray"
+                        android:textColorHint="@color/gainsboro"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/user_instagram_link"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/transparent"
+                        android:hint="instagram profile id e.g. staryaarapp"
+                        android:imeOptions="flagNavigateNext"
+                        android:minLines="2"
+                        android:nextFocusForward="@+id/jobtitle_edit"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="2dp"
+                        android:textColor="@color/dimgray"
+                        android:textColorHint="@color/gainsboro"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/user_twitter_link"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/transparent"
+                        android:hint="twitter profile id e.g. staryaarapp"
+                        android:imeOptions="flagNavigateNext"
+                        android:minLines="2"
+                        android:nextFocusForward="@+id/jobtitle_edit"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="2dp"
+                        android:textColor="@color/dimgray"
+                        android:textColorHint="@color/gainsboro"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/user_youtube_link"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/transparent"
+                        android:hint="youtube channel id e.g. staryaarapp"
+                        android:imeOptions="flagNavigateNext"
+                        android:minLines="2"
+                        android:nextFocusForward="@+id/jobtitle_edit"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="2dp"
+                        android:textColor="@color/dimgray"
+                        android:textColorHint="@color/gainsboro"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/personal_details_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/app_color_lightest"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/lightgraycolor"
+                        android:elevation="0.5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Personal Details"
+                        android:textColor="@color/dimgray"
+                        android:textSize="16dp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/lightgraycolor"
+                        android:elevation="0.5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="( Information entered in this section would be used only to contact you for exciting offers and deals. This will not be visible on your public profile. )"
+                        android:textColor="@color/dimgray"
+                        android:textSize="10dp"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/user_email_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/transparent"
+                        android:hint="Email address"
+                        android:imeOptions="flagNavigateNext"
+                        android:minLines="2"
+                        android:nextFocusForward="@+id/jobtitle_edit"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="5dp"
+                        android:textColor="@color/dimgray"
+                        android:textColorHint="@color/gainsboro"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/user_phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/transparent"
+                        android:hint="Phone number"
+                        android:imeOptions="flagNavigateNext"
+                        android:minLines="2"
+                        android:nextFocusForward="@+id/jobtitle_edit"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="2dp"
+                        android:textColor="@color/dimgray"
+                        android:textColorHint="@color/gainsboro"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/user_date_of_birth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/transparent"
+                        android:focusableInTouchMode="false"
+                        android:hint="Date of Birth"
+                        android:imeOptions="flagNavigateNext"
+                        android:inputType="date"
+                        android:minLines="2"
+                        android:nextFocusForward="@+id/jobtitle_edit"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="2dp"
+                        android:textColor="@color/dimgray"
+                        android:textColorHint="@color/gainsboro"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/lightgraycolor"
+                        android:elevation="0.5dp"
+                        android:padding="10dp"
+                        android:text="Bio"
+                        android:textColor="@color/dimgray"
+                        android:textSize="16dp"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/user_bio_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/transparent"
+                        android:hint="Your Bio"
+                        android:imeOptions="flagNavigateNext"
+                        android:minLines="2"
+                        android:nextFocusForward="@+id/jobtitle_edit"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="5dp"
+                        android:textColor="@color/dimgray"
+                        android:textColorHint="@color/gainsboro"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

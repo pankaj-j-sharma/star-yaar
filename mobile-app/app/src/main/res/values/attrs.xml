@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CropVideoView">
+
+        <attr name="guidelines">
+            <enum name="off" value="0" />
+            <enum name="onTouch" value="1" />
+            <enum name="on" value="2" />
+        </attr>
+
+        <attr name="fixAspectRatio" format="boolean" />
+        <attr name="aspectRatioX" format="integer" />
+        <attr name="aspectRatioY" format="integer" />
+
+    </declare-styleable>
+    <declare-styleable name="UnderLineView">
+        <attr name="text" format="reference|string" />
+        <attr name="textColor" format="reference|integer" />
+        <attr name="lineColor" format="reference|integer" />
+        <attr name="select" format="reference|boolean" />
+    </declare-styleable>
+</resources>
